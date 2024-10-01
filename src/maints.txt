@@ -1,0 +1,218 @@
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
+import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+import { withFetch } from '@angular/common/http'; // Import withFetch
+import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+
+const providers = [
+  provideHttpClient(withFetch()),
+  ...(appConfig.providers || []),
+];
+
+// Bootstrap the application with NgxEchartsModule
+bootstrapApplication(AppComponent, {
+  providers: [
+    ...providers,
+  ],
+})
+.then(() => {
+  NgxEchartsModule.forRoot({
+    echarts: () => import('echarts'),
+  });
+})
+.catch((err) => console.error(err));
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { AppComponent } from './app/app.component';
+// import { appConfig } from './app/app.config'; // Import the application config
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+
+// // Create an array for providers
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers from appConfig
+// ];
+
+// // Bootstrap the application with the AppComponent
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     ...providers, // Add combined providers
+//   ],
+//   // Add imports here, separate from providers
+//   imports: [
+//     NgxEchartsModule.forRoot({
+//       echarts: () => import('echarts'), // Use dynamic import for ECharts
+//     }),
+//   ],
+// })
+// .catch((err) => console.error(err));
+
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { AppComponent } from './app/app.component';
+// import { appConfig } from './app/app.config'; // Import the application config
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+
+// // Create an array for providers
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers from appConfig
+// ];
+
+// // Bootstrap the application with the AppComponent
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     ...providers, // Add combined providers
+//   ],
+//   imports: [
+//     NgxEchartsModule.forRoot({ // Add NgxEchartsModule here
+//       echarts: () => import('echarts'), // Use dynamic import for ECharts
+//     })
+//   ],
+// })
+// .catch((err) => console.error(err));
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { appConfig } from './app/app.config'; // Import the config
+// import { AppComponent } from './app/app.component';
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+
+// // Combine the providers from appConfig and the new HttpClient provider
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers, if any
+// ];
+
+// // Bootstrap the application with the AppComponent and combined providers
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     ...providers, // Add your combined providers
+//     NgxEchartsModule.forRoot({
+//       echarts: () => import('echarts'), // Use dynamic import for ECharts
+//     }), // Add NgxEchartsModule here as a module
+//   ],
+// })
+// .catch((err) => console.error(err));
+
+
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { appConfig } from './app/app.config'; // Import the config
+// import { AppComponent } from './app/app.component';
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+
+// // Combine the providers from appConfig and the new HttpClient provider
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers, if any
+//   NgxEchartsModule.forRoot({
+//     echarts: () => import('echarts'), // Use dynamic import for ECharts
+//   }), // Add NgxEchartsModule here
+// ];
+
+// // Bootstrap the application with the AppComponent and combined providers
+// bootstrapApplication(AppComponent, {
+//   providers // Use the combined providers array
+// })
+// .catch((err) => console.error(err));
+
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { appConfig, getNgxEchartsConfig } from './app/app.config'; // Import the config and function
+// import { AppComponent } from './app/app.component';
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+
+// // Combine the providers from appConfig and the new HttpClient provider
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers, if any
+// ];
+
+// // Bootstrap the application with the AppComponent, combined providers, and NgxEchartsModule
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     ...providers,
+//     getNgxEchartsConfig(), // Add NgxEchartsModule here
+//   ]
+// })
+// .catch((err) => console.error(err));
+
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { appConfig } from './app/app.config';
+// import { AppComponent } from './app/app.component';
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+
+// // Combine the providers from appConfig and the new HttpClient provider
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers, if any
+// ];
+
+// // Bootstrap the application with the AppComponent and the combined providers
+// bootstrapApplication(AppComponent, {
+//   providers, // Use the combined providers array
+//   // Do not spread appConfig here; it's already included in providers
+// })
+// .catch((err) => console.error(err));
+
+
+
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { appConfig } from './app/app.config';
+// import { AppComponent } from './app/app.component';
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+
+// // Combine the providers from appConfig and the new HttpClient provider
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers, if any
+// ];
+
+// bootstrapApplication(AppComponent, {
+//   providers, // Use the combined providers array
+//   // Only include providers here; don't spread appConfig again if it already has providers
+//   ...appConfig, 
+// })
+// .catch((err) => console.error(err));
+
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { appConfig } from './app/app.config';
+// import { AppComponent } from './app/app.component';
+// import { provideHttpClient } from '@angular/common/http'; // Import HttpClient provider
+// import { withFetch } from '@angular/common/http'; // Import withFetch
+
+
+
+// // Combine the providers from appConfig and the new HttpClient provider
+// const providers = [
+//   provideHttpClient(withFetch()), // Configure HttpClient to use fetch
+//   ...(appConfig.providers || []), // Merge existing providers, if any
+// ];
+
+// bootstrapApplication(AppComponent, {
+//   providers, // Use the combined providers array
+//   ...appConfig // Spread the existing appConfig
+// })
+// .catch((err) => console.error(err));
+// ---------------------
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     provideHttpClient(withFetch()) // Configure HttpClient to use fetch
+//   ],
+//   ...appConfig // Spread the existing appConfig
+// })
+// .catch((err) => console.error(err));

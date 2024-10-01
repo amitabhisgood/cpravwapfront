@@ -1,0 +1,35 @@
+import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+
+@Component({
+  selector: 'app-chart',
+  standalone: true,
+  imports: [RouterOutlet, CommonModule, HttpClientModule], // Add CommonModule here
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.css'] // Changed to styleUrls
+})
+export class ChartComponent implements OnInit {
+
+  jsonResponse: any; // To store the response from the server
+  message: string = 'Hello, server!'; // Message to send to the server
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit(): void {
+    this.sendMessageToServer();
+  }
+
+  sendMessageToServer(): void {
+    // Send a message to the backend API
+    this.http.post<any>('http://localhost:8080/api/ohlc-data', { message: this.message }).subscribe(
+      (response) => {
+        this.jsonResponse = response; // Store the response
+      },
+      (error) => {
+        console.error('Error sending message', error);
+      }
+    );
+  }
+}

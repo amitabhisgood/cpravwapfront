@@ -1,0 +1,229 @@
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideClientHydration } from '@angular/platform-browser';
+import { EChartsOption } from 'echarts'; // Import EChartsOption
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }), 
+    provideRouter(routes), 
+    provideClientHydration(),
+    {
+      provide: 'NGX_ECHARTS_CONFIG', 
+      useValue: {
+        // Add specific configuration options for ECharts here if needed
+      } as EChartsOption
+    }
+  ]
+};
+
+
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+// import { EChartsOption } from 'echarts'; // Import EChartsOption
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // Add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     }
+//   ]
+// };
+
+
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+// import { EChartsOption } from 'echarts'; // Import EChartsOption
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // Add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     }
+//   ]
+// };
+
+// // Export a function to bootstrap the NgxEchartsModule separately
+// export function getNgxEchartsConfig() {
+//   return NgxEchartsModule.forRoot({
+//     echarts: () => import('echarts'), // Use dynamic import for ECharts
+//   });
+// }
+
+
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+// import { EChartsOption } from 'echarts'; // Import EChartsOption
+// import { NgxEchartsConfig } from 'ngx-echarts'; // Ensure you import NgxEchartsConfig
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // Add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     }
+//   ],
+//   imports: [
+//     NgxEchartsModule.forRoot({
+//       echarts: () => import('echarts'), // Use dynamic import for ECharts
+//     } as NgxEchartsConfig) // Provide the required configuration
+//   ]
+// };
+
+
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+// import { EChartsOption } from 'echarts'; // Import EChartsOption
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // Add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     }
+//   ],
+//   // Import NgxEchartsModule directly here
+//      NgxEchartsModule.forRoot({
+//        echarts: () => import('echarts'), // Use dynamic import for ECharts
+//      } as NgxEchartsConfig) // Provide the required configuration
+//    ]
+// };
+
+
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule, NgxEchartsConfig } from 'ngx-echarts'; // Import NgxEchartsModule and NgxEchartsConfig
+// import { EChartsOption } from 'echarts';
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // You can add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     },
+//     NgxEchartsModule.forRoot({
+//       echarts: () => import('echarts'), // Use dynamic import for ECharts
+//     } as NgxEchartsConfig) // Provide the required configuration
+//   ]
+// };
+
+
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule } from 'ngx-echarts'; // Import NgxEchartsModule
+// import { EChartsOption } from 'echarts'; // Import EChartsOption
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // You can add specific configuration options for ECharts here if needed
+//       } // Removed 'as EChartsOption' since it might cause confusion
+//     }
+//   ],
+//   imports: [
+//     NgxEchartsModule.forRoot({}) // Ensure NgxEchartsModule is included
+//   ]
+// };
+// ----------
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule } from 'ngx-echarts'; // Only import EChartsOption
+// import { EChartsOption } from 'echarts'; // Only import EChartsOption
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // You can add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     }
+//   ]
+// };
+
+// ----------
+
+// import { ApplicationConfig } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+// import { NgxEchartsModule, EChartsOption } from 'ngx-echarts'; // Import NgxEchartsModule
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [
+//     provideZoneChangeDetection({ eventCoalescing: true }), 
+//     provideRouter(routes), 
+//     provideClientHydration(),
+//     {
+//       provide: 'NGX_ECHARTS_CONFIG', 
+//       useValue: {
+//         // You can add specific configuration options for ECharts here if needed
+//       } as EChartsOption
+//     }
+//   ],
+//   imports: [NgxEchartsModule.forRoot({})] // Add NgxEchartsModule to imports
+// };
+//---------------------
+// import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+// import { provideRouter } from '@angular/router';
+
+// import { routes } from './app.routes';
+// import { provideClientHydration } from '@angular/platform-browser';
+
+// export const appConfig: ApplicationConfig = {
+//   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
+// };
